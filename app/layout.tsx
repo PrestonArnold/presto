@@ -13,21 +13,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
 
-        <header>
-          <h1>Presto</h1>
+        <header style={{ backgroundColor: 'var(--color-surface)', borderBottom: '1px solid var(--color-border)', padding: 'var(--space-md)' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--space-md)' }}>
+            <h1 style={{ fontSize: 'var(--font-size-xl)', fontWeight: 'var(--font-weight-bold)', textAlign: 'center' }}>Presto</h1>
+          </div>
         </header>
 
-        <main id="main">
+        <main id="main" style={{ flex: 1 }}>
           {children}
         </main>
 
-        <nav aria-label="Primary navigation">
-          {/* TODO: Add bottom nav for mobile */}
+        <nav aria-label="Primary navigation" style={{ backgroundColor: 'var(--color-surface)', borderTop: '1px solid var(--color-border)', padding: 'var(--space-md)' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--space-md)' }}>
+            {/* TODO: Add bottom nav for mobile */}
+          </div>
         </nav>
       </body>
     </html>
