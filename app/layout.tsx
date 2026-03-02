@@ -14,7 +14,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
+
+        <header>
+          <h1>Presto</h1>
+        </header>
+
+        <main id="main">
+          {children}
+        </main>
+
+        <nav aria-label="Primary navigation">
+          {/* TODO: Add bottom nav for mobile */}
+        </nav>
       </body>
     </html>
   );
