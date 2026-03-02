@@ -62,6 +62,7 @@
   --transition-base: 250ms ease;
   --transition-slow: 350ms ease;
 }
+
 /* Accessibility: Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -73,6 +74,7 @@
     scroll-behavior: auto !important;
   }
 }
+
 /* Base focus styles */
 *:focus-visible {
   outline: var(--focus-ring);
@@ -95,6 +97,13 @@ html, body {
   line-height: var(--line-height-md);
 }
 
+/* Layout styles */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -109,4 +118,38 @@ html, body {
 
 .skip-link:focus {
   top: 6px;
+}
+
+.app-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.app-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.app-nav {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-md);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
